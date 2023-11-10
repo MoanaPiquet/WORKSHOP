@@ -4,12 +4,12 @@ OBJ		=	$(SRC:.c=.o)
 
 NAME	=	display
 
-C_FLAGS =	-l csfml-graphics
+C_FLAGS =	-lm
 
 all:	$(NAME)
 
 $(NAME):	$(OBJ)
-		gcc $(OBJ) -o $(NAME) -g $(C_FLAGS)
+		gcc $(OBJ) -o $(NAME) -g $(C_FLAGS) 
 
 clean:
 		rm -f *.c~
